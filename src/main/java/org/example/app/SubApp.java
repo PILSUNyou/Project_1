@@ -1,6 +1,6 @@
 package org.example.app;
 
-
+import org.example.screen.Rool;
 import org.example.screen.Screen;
 
 import java.util.Scanner;
@@ -30,7 +30,14 @@ public class SubApp {
             }
 
             else if (subCmd.equals("1") || subCmd.equals("gameStart") || subCmd.startsWith("게임시작")) {
-                Screen.battleScreen();
+                Screen.roolSkip();
+                String skip = sc.nextLine();
+
+                if (skip.equals("1") || skip.equals("skip") || skip.equals("스킵")) {
+                    break;
+                }
+
+            Rool.run();
             }
 
             else if (subCmd.equals("2") || subCmd.equals("lanking") || subCmd.startsWith("랭킹")) {

@@ -1,5 +1,6 @@
 package org.example.app;
 
+import org.example.screen.Loding;
 import org.example.screen.Rool;
 import org.example.screen.Screen;
 
@@ -9,7 +10,7 @@ public class SubApp {
     public void Start() {
         Scanner sc = new Scanner(System.in);
 
-        // 메인화면 스크린 표시
+        // 서브화면 스크린 표시
         Screen.subSreen();
 
         while (true) {
@@ -34,10 +35,16 @@ public class SubApp {
                 String skip = sc.nextLine();
 
                 if (skip.equals("1") || skip.equals("skip") || skip.equals("스킵")) {
-                    break;
+                    Screen.gameStartScreen();
+                    Loding.lodingScreen();
+                    new GameApp().Start();
                 }
-
-            Rool.run();
+                else {
+                    Rool.run();
+                    Screen.gameStartScreen();
+                    Loding.lodingScreen();
+                    new GameApp().Start();
+                }
             }
 
             else if (subCmd.equals("2") || subCmd.equals("lanking") || subCmd.startsWith("랭킹")) {

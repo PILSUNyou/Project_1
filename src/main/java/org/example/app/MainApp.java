@@ -12,7 +12,6 @@ public class MainApp {
         MemberController memberController = new MemberController(sc);
         // 메인화면 스크린 표시
         Screen.mainSreen();
-
         while (true) {
             // 메인화면 선택창 출력
             Screen.mainSelectScreen();

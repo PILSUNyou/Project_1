@@ -1,7 +1,7 @@
 package org.example.screen;
 
 public class Battle {
-    //--------------- 배틀 애니메이션 연출 --------------------------------------------
+    //--------------- 배틀 스테이지 연출 --------------------------------------------
     public static void battleAnimation1() {
         String[] battleAnimation1 = new String[2];
         battleAnimation1[0] =

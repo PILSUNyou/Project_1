@@ -1,5 +1,6 @@
 package org.example.app;
 
+import org.example.screen.Attack;
 import org.example.screen.Battle;
 import org.example.screen.Screen;
 import org.example.stage.Stage;
@@ -20,7 +21,7 @@ public class GameApp {
                     Battle.battleAnimation1();
                     while (characterHp > 0 && monsterHp > 0) {
                         Random random = new Random(); // 랜덤 함수 생성
-
+                        int attackEffectRandomNumber = (int)(Math.random() * 3)+1;
                         int number1 = (int) (Math.random() * 91) + 10; // 첫 번째 랜덤 숫자 저장
                         int number2 = (int) (Math.random() * 91) + 10; // 두 번째 랜덤 숫자 저장
                         Stage.first(number1,number2, characterHp,monsterHp);
@@ -41,29 +42,20 @@ public class GameApp {
                         int cmd3 = sc.nextInt(); // 정답 입력
 
                         if (cmd3 == sum) {
+                            for (int i = 0; i < 100; i++) {
+                                System.out.println("");
+                                System.out.flush();
+                            }
+                            new Attack().playerAttackAnimation(attackEffectRandomNumber);
                             monsterHp--;
-                            System.out.println("=========================================================");
-                            System.out.println("=====                   =================================");
-                            System.out.printf("=====  player Hp : %d    =================================\n",characterHp);
-                            System.out.println("=====                   =================================");
-                            System.out.println("============================                    =========");
-                            System.out.printf("============================  monster Hp : %d    =========\n",monsterHp);
-                            System.out.println("============================                    =========");
-                            System.out.println("=========================================================");
-                            System.out.println();
                         }
 
                         else if (cmd3 != sum) {
+                            for (int i = 0; i < 100; i++) {
+                                System.out.println("");
+                                System.out.flush();
+                            }
                             characterHp--;
-                            System.out.println("=========================================================");
-                            System.out.println("=====                   =================================");
-                            System.out.printf("=====  player Hp : %d    =================================\n",characterHp);
-                            System.out.println("=====                   =================================");
-                            System.out.println("============================                    =========");
-                            System.out.printf("============================  monster Hp : %d    =========\n",monsterHp);
-                            System.out.println("============================                    =========");
-                            System.out.println("=========================================================");
-                            System.out.println();
                         }
 
                         if(monsterHp == 0){

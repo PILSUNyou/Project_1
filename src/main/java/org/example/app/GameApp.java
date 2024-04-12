@@ -55,6 +55,7 @@ public class GameApp {
                                 System.out.println("");
                                 System.out.flush();
                             }
+                            new Attack().monsterAttackAnimation(stage);
                             characterHp--;
                         }
 

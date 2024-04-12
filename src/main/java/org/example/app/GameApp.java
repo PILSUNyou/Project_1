@@ -50,6 +50,7 @@ public class GameApp {
                             System.out.printf("============================  monster Hp : %d    =========\n",monsterHp);
                             System.out.println("============================                    =========");
                             System.out.println("=========================================================");
+                            System.out.println();
                         }
 
                         else if (cmd3 != sum) {
@@ -62,6 +63,7 @@ public class GameApp {
                             System.out.printf("============================  monster Hp : %d    =========\n",monsterHp);
                             System.out.println("============================                    =========");
                             System.out.println("=========================================================");
+                            System.out.println();
                         }
 
                         if(monsterHp == 0){

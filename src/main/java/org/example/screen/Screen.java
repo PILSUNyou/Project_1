@@ -2,6 +2,10 @@ package org.example.screen;
 
 public class Screen {
     public static void mainSreen() {
+        for (int i = 0; i < 150; i++) {
+            System.out.println("");
+            System.out.flush();
+        }
         System.out.println(
                 "▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄   ▄            ▄▄▄▄▄▄▄▄▄▄▄  ▄▄       ▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄\n" +
                         "▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░▌ ▐░▌          ▐░░░░░░░░░░░▌▐░░▌     ▐░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌\n" +
@@ -30,6 +34,10 @@ public class Screen {
     }
 
     public static void subSreen() {
+        for (int i = 0; i < 150; i++) {
+            System.out.println("");
+            System.out.flush();
+        }
         System.out.println(
                 "        ,,,,,,,,,,,,,                                              .#############.                                 \n" +
                         "    .;;;;;;;;;;;;;;;;;;;,.                                      .###################.                              \n" +
@@ -83,6 +91,10 @@ public class Screen {
     }
 
     public static void exitScreen() {
+        for (int i = 0; i < 150; i++) {
+            System.out.println("");
+            System.out.flush();
+        }
         System.out.println(
                 "===========================================================================================================================================\n" +
                         "\n" +
@@ -93,6 +105,10 @@ public class Screen {
     }
 
     public static void roolSkip() {
+        for (int i = 0; i < 150; i++) {
+            System.out.println("");
+            System.out.flush();
+        }
         System.out.println(
                 "===========================================================================================================================================\n" +
                         "\n" +
@@ -252,7 +268,5 @@ public class Screen {
                         "  ' ') '( (/                                                                   \n" +
                         "    '   '  `"
         );
-
-
     }
 }

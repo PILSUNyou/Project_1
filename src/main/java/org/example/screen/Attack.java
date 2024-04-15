@@ -717,7 +717,7 @@ public class Attack {
         try {
             Thread.sleep(1500);
         } catch (InterruptedException e) {}
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 150; i++) {
             System.out.println("");
             System.out.flush();
         }

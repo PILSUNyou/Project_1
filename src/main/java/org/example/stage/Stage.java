@@ -1,8 +1,9 @@
 package org.example.stage;
 
 public class Stage {
-    public static void first(int number1, int number2, int characterHp, int monsterHp) {
-        String hp ="";
+    public static void first(int number1, int number2, int characterHp, int monsterHp, String sign) {
+        String hp = "";
+
         for (int i = 0; i < 100; i++) {
             System.out.println("");
             System.out.flush();
@@ -15,13 +16,13 @@ public class Stage {
                         " /   /,--' `--.  `                                                                           \\/ `\\__|`\\___/`|__/`  \\/ \n" +
                         " |   /      ___\\_                                                                                    \\(/|\\)/       `     \n" +
                         " |  | /  ______|                                                                                      \" ` \"     \n" +
-                        " |  | |  |_' \\'|                                                                                   \n" +
-                        " \\ ,' (   _) -`|                                                                                         \n" +
-                        "  '--- \\ '-.-- /                                                                                                  \n" +
-                        " ______/`--'--<                                                                                                    \n" +
-                        " |    |`-.  ,;/``--._                                                                                               \n" +
-                        " |    |-. _///     ,'`\\                                                                                            \n" +
-                        " |    |`-Y;'/     /  ,-'\\                                                                                           \n" +
+                        " |  | |  |_' \\'|                                                                      \n" +
+                        " \\ ,' (   _) -`|                                                    \n" +
+                        "  '--- \\ '-.-- /                                               \n" +
+                        " ______/`--'--<                                                                          \n" +
+                        " |    |`-.  ,;/``--._                                                \n" +
+                        " |    |-. _///     ,'`\\                                                      \n"+
+                        " |    |`-Y;'/     /  ,-'\\                                                                              \n" +
                         " |    | // <_    / ,'  ,-'\\                                                                                         \n" +
                         " '----'// -- `-./,' ,-'  \\/                                                                                       \n" +
                         "  |   //[==]     \\,' \\_.,-\\                                                                                  \n" +
@@ -30,15 +31,15 @@ public class Stage {
                         "   //          `-- |--' |   \\                                                                   \n" +
                         "        [==__,,,,--'    |-'\"                                                                    \n" +
                         "    ---\"\"''             |                                                                                    \n" +
-                        "             ___...____/     \n"+
+                        "             ___...____/     \n" +
 
-                        "$$$$$$$$$$$$$$$$$$$$$                                                                           $$$$$$$$$$$$$$$$$$$$$$\n"+
-                        "$                   $                                                                           $                    $\n"+
-                        "$    Player H P     $                                                                           $    Monster H P     $\n"+
-                        "  %s                                                                                 %s    \n", Player.hp(characterHp), Monster.hp(monsterHp)+
-                        "\n"+
-                        "$                   $                                                                           $                    $\n"+
-                        "$$$$$$$$$$$$$$$$$$$$$                                                                           $$$$$$$$$$$$$$$$$$$$$$"
+                        "$$$$$$$$$$$$$$$$$$$$$                        ※※※※※※※※※※※※※※※※※※※※※※※※                           $$$$$$$$$$$$$$$$$$$$$$\n" +
+                        "$                   $                        ※                             ※                           $                    $\n" +
+                        "$    Player H P     $                        ※         문  제 !!!           ※                           $    Monster H P     $\n" +
+                        "  %s                           ※       %d %s %d = 무엇 ?       ※                             %s    \n", Player.hp(characterHp),number1,sign,number2, Monster.hp(monsterHp) +
+                        "\n" +
+                        "$                   $                        ※       남은 시간 : 10 초       ※                           $                    $\n" +
+                        "$$$$$$$$$$$$$$$$$$$$$                        ※※※※※※※※※※※※※※※※※※※※※※※※                           $$$$$$$$$$$$$$$$$$$$$$"
         );
-    }
+              }
 }

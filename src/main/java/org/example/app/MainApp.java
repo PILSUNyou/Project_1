@@ -16,6 +16,7 @@ public class MainApp {
             // 메인화면 선택창 출력
             Screen.mainSelectScreen();
             System.out.print("명령어를 입력해 주세요 : ");
+
             String cmd = sc.nextLine();
             cmd = cmd.trim();
 

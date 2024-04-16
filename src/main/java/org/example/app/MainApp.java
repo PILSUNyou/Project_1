@@ -1,6 +1,7 @@
 package org.example.app;
 
 import org.example.controller.MemberController;
+import org.example.screen.Battle;
 import org.example.screen.Screen;
 
 import java.util.Scanner;
@@ -19,6 +20,9 @@ public class MainApp {
 
             String cmd = sc.nextLine();
             cmd = cmd.trim();
+            if (cmd.equals("4")) {
+                Battle.battleAnimation6();
+            }
 
             if (cmd.equals("3") || cmd.equals("exit") || cmd.startsWith("종료") || cmd.equals("EXIT")) {
                 Screen.exitScreen();

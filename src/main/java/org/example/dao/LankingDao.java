@@ -8,19 +8,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class LankingDao {
-    private List<Lanking> lankings;
+public class LankingDao extends Dao{
     private DBConnection dbConnection;
 
     public LankingDao(){
-        lankings = new ArrayList<>();
         dbConnection = Container.getDBConnection();
     }
 
     public List<Lanking> getLankings() {
         StringBuilder sb = new StringBuilder();
 
-        sb.append(String.format("SELECT * FROM lanking "));
+        sb.append(String.format("SELECT * "));
+        sb.append(String.format("FROM lanking "));
+        sb.append(String.format("ORDER BY tire DESC "));
 
         List<Lanking> lankings = new ArrayList<>();
         List<Map<String, Object>> rows = dbConnection.selectRows(sb.toString());

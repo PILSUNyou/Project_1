@@ -1,6 +1,5 @@
 package org.example.container;
 
-import org.example.controller.LankingController;
 import org.example.controller.Session;
 import org.example.dao.LankingDao;
 import org.example.dao.MemberDao;

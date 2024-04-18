@@ -31,4 +31,57 @@ public class LankingDao extends Dao{
 
         return lankings;
     }
+
+    public int putInLanking(Lanking lanking) {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(String.format("INSERT INTO lanking "));
+        sb.append(String.format("SET regDate = NOW(), "));
+        sb.append(String.format("nickName = '%s', ", lanking.nickName));
+        sb.append(String.format("tire = %d ", lanking.tire));
+
+        return dbConnection.insert(sb.toString());
+    }
+
+    public boolean getForPrintLankingName(String nickName) {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(String.format("SELECT * "));
+        sb.append(String.format("FROM lanking "));
+        sb.append(String.format("WHERE lanking.nickName = '%s' ", nickName));
+
+        Map<String, Object> row = dbConnection.selectRow(sb.toString());
+
+        if ( row.isEmpty() ) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public Lanking getForPrintLankingTire(String nickName) {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(String.format("SELECT * "));
+        sb.append(String.format("FROM lanking "));
+        sb.append(String.format("WHERE lanking.nickName = '%s' ", nickName));
+
+        Map<String, Object> row = dbConnection.selectRow(sb.toString());
+
+        if ( row.isEmpty() ) {
+            return null;
+        }
+
+        return new Lanking(row);
+    }
+
+    public int updateLankingTire(String nickName, int tire) {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(String.format("UPDATE lanking "));
+        sb.append(String.format("SET tire = %d ", tire));
+        sb.append(String.format("WHERE nickName = '%s' ", nickName));
+
+        return dbConnection.update(sb.toString());
+    }
 }

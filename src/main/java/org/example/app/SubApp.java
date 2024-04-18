@@ -2,7 +2,6 @@ package org.example.app;
 
 import org.example.controller.LankingController;
 import org.example.controller.MemberController;
-import org.example.dto.Lanking;
 import org.example.screen.Rool;
 import org.example.screen.Screen;
 
@@ -15,9 +14,9 @@ public class SubApp {
 
         Scanner sc = new Scanner(System.in);
         LankingController lankingController = new LankingController();
+
         // 서브화면 스크린 표시
         Screen.subSreen();
-
 
         while (true) {
             Screen.subSelectScreen();
@@ -34,7 +33,6 @@ public class SubApp {
             if (subCmd.length() == 0) {
                 System.out.print("명령어를 입력해 주세요 :");
                 Screen.subSelectScreen();
-                continue;
 
             } else if (subCmd.equals("1") || subCmd.equals("gameStart") || subCmd.startsWith("게임시작")) {
                 Screen.roolSkip();

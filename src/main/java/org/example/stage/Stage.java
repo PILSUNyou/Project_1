@@ -35,8 +35,8 @@ public class Stage {
 
                         "$$$$$$$$$$$$$$$$$$$$$                        ※※※※※※※※※※※※※※※※※※※※※※※※                           $$$$$$$$$$$$$$$$$$$$$$\n" +
                         "                                                                                                                      \n" +
-                        "     Player H P                                        문  제 !!!                                           Monster H P     \n" +
-                        "  %s                                 %d %s %d = 무엇 ?                                    %s    \n", Player.hp(characterHp),number1,sign,number2, Monster.hp(monsterHp) +
+                        "     Player H P                                        문  제 !!!                                             Monster H P     \n" +
+                        "  %s                                 %d %s %d = 무엇 ?                                        %s    \n", Player.hp(characterHp),number1,sign,number2, Monster.hp(monsterHp) +
                         "\n" +
                         "                                                     제한 시간 : 10 초                                                     \n" +
                         "$$$$$$$$$$$$$$$$$$$$$                        ※※※※※※※※※※※※※※※※※※※※※※※※                           $$$$$$$$$$$$$$$$$$$$$$"
@@ -76,8 +76,8 @@ public class Stage {
 
                         "$$$$$$$$$$$$$$$$$$$$$                        ※※※※※※※※※※※※※※※※※※※※※※※※                           $$$$$$$$$$$$$$$$$$$$$$\n" +
                         "                                                                                                                      \n" +
-                        "     Player H P                                        문  제 !!!                                           Monster H P     \n" +
-                        "  %s                                 %d %s %d = 무엇 ?                                    %s    \n", Player.hp(characterHp),number1,sign,number2, Monster.hp(monsterHp) +
+                        "     Player H P                                        문  제 !!!                                             Monster H P     \n" +
+                        "  %s                                 %d %s %d = 무엇 ?                                        %s    \n", Player.hp(characterHp),number1,sign,number2, Monster.hp(monsterHp) +
                         "\n" +
                         "                                                     제한 시간 : 15 초                                                  \n" +
                         "$$$$$$$$$$$$$$$$$$$$$                        ※※※※※※※※※※※※※※※※※※※※※※※※                           $$$$$$$$$$$$$$$$$$$$$$"
@@ -117,8 +117,8 @@ public class Stage {
 
                         "$$$$$$$$$$$$$$$$$$$$$                        ※※※※※※※※※※※※※※※※※※※※※※※※                           $$$$$$$$$$$$$$$$$$$$$$\n" +
                         "                                                                                                                      \n" +
-                        "     Player H P                                        문  제 !!!                                           Monster H P     \n" +
-                        "  %s                                 %d %s %d = 무엇 ?                                  %s    \n", Player.hp(characterHp),number1,sign,number2, Monster.hp(monsterHp) +
+                        "     Player H P                                        문  제 !!!                                             Monster H P     \n" +
+                        "  %s                                 %d %s %d = 무엇 ?                                     %s    \n", Player.hp(characterHp),number1,sign,number2, Monster.hp(monsterHp) +
                         "\n" +
                         "                                                     제한 시간 : 20 초                                                     \n" +
                         "$$$$$$$$$$$$$$$$$$$$$                        ※※※※※※※※※※※※※※※※※※※※※※※※                           $$$$$$$$$$$$$$$$$$$$$$"
@@ -158,8 +158,8 @@ public class Stage {
 
                         "$$$$$$$$$$$$$$$$$$$$$                        ※※※※※※※※※※※※※※※※※※※※※※※※                           $$$$$$$$$$$$$$$$$$$$$$\n" +
                         "                                                                                                                      \n" +
-                        "     Player H P                                        문  제 !!!                                           Monster H P     \n" +
-                        "  %s                                 %d %s %d = 무엇 ?                                  %s    \n", Player.hp(characterHp),number1,sign,number2, Monster.hp(monsterHp) +
+                        "     Player H P                                        문  제 !!!                                             Monster H P     \n" +
+                        "  %s                                 %d %s %d = 무엇 ?                                     %s    \n", Player.hp(characterHp),number1,sign,number2, Monster.hp(monsterHp) +
                         "\n" +
                         "                                                     제한 시간 : 25 초                                                     \n" +
                         "$$$$$$$$$$$$$$$$$$$$$                        ※※※※※※※※※※※※※※※※※※※※※※※※                           $$$$$$$$$$$$$$$$$$$$$$"
@@ -199,8 +199,8 @@ public class Stage {
 
                         "$$$$$$$$$$$$$$$$$$$$$                        ※※※※※※※※※※※※※※※※※※※※※※※※                           $$$$$$$$$$$$$$$$$$$$$$\n" +
                         "                                                                                                                     \n" +
-                        "     Player H P                                        문  제 !!!                                           Monster H P     \n" +
-                        "  %s                                 %d %s %d = 무엇 ?                                %s    \n", Player.hp(characterHp),number1,sign,number2, Monster.hp(monsterHp) +
+                        "     Player H P                                        문  제 !!!                                             Monster H P     \n" +
+                        "  %s                                 %d %s %d = 무엇 ?                                     %s    \n", Player.hp(characterHp),number1,sign,number2, Monster.hp(monsterHp) +
                         "\n" +
                         "                                                     제한 시간 : 30 초                                                        \n" +
                         "$$$$$$$$$$$$$$$$$$$$$                        ※※※※※※※※※※※※※※※※※※※※※※※※                           $$$$$$$$$$$$$$$$$$$$$$"
@@ -246,8 +246,8 @@ public class Stage {
 
                         "$$$$$$$$$$$$$$$$$$$$$                        ※※※※※※※※※※※※※※※※※※※※※※※※                           $$$$$$$$$$$$$$$$$$$$$$\n" +
                         "                                                                                                                      \n" +
-                        "     Player H P                                        문  제 !!!                                           Monster H P     \n" +
-                        "  %s                                 %d %s %d = 무엇 ?                                %s    \n", Player.hp(characterHp),number1,sign,number2, Monster.hp(monsterHp) +
+                        "     Player H P                                        문  제 !!!                                             Monster H P     \n" +
+                        "  %s                                 %d %s %d = 무엇 ?                                     %s    \n", Player.hp(characterHp),number1,sign,number2, Monster.hp(monsterHp) +
                         "\n" +
                         "                                                     제한 시간 : 35 초                                                     \n" +
                         "$$$$$$$$$$$$$$$$$$$$$                        ※※※※※※※※※※※※※※※※※※※※※※※※                           $$$$$$$$$$$$$$$$$$$$$$"

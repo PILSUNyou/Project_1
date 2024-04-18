@@ -28,4 +28,8 @@ class Dto {
     public Dto(Map<String, Object> row) {
         this((int) row.get("id"), (String) row.get("regDate"));
     }
+
+    public Dto(String regDate) {
+        this.regDate= regDate;
+    }
 }

@@ -3,7 +3,6 @@ package org.example.app;
 import org.example.container.Container;
 import org.example.controller.MemberController;
 import org.example.db.DBConnection;
-import org.example.screen.Battle;
 import org.example.screen.Screen;
 
 import java.util.Scanner;

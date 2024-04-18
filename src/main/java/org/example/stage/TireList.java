@@ -20,6 +20,9 @@ public class TireList {
         else if (tire == 5){
             return "마스터";
         }
+        else if (tire == 6){
+            return "챌린저";
+        }
         return null;
     }
 }

@@ -1,5 +1,8 @@
 package org.example.app;
 
+import org.example.controller.LankingController;
+import org.example.controller.MemberController;
+import org.example.dto.Lanking;
 import org.example.screen.Rool;
 import org.example.screen.Screen;
 
@@ -11,19 +14,19 @@ public class SubApp {
         String skip = "";
 
         Scanner sc = new Scanner(System.in);
-
+        LankingController lankingController = new LankingController();
         // 서브화면 스크린 표시
         Screen.subSreen();
 
 
         while (true) {
-            System.out.print("명령어를 입력해 주세요 : ");
             Screen.subSelectScreen();
-            System.out.println("다음 입력 대기 중");
+            System.out.println("다음 입력 대기 중 :");
             subCmd = sc.nextLine();
             subCmd = subCmd.trim();
 
             if (subCmd.equals("3") || subCmd.equals("logout") || subCmd.startsWith("로그아웃")) {
+                MemberController.doLogout();
                 Screen.mainSreen();
                 break;
             }
@@ -45,14 +48,14 @@ public class SubApp {
                     Rool.run();
                     new GameApp().Start();
                 }
-                continue;
+
             } else if (subCmd.equals("2") || subCmd.equals("lanking") || subCmd.startsWith("랭킹")) {
-                // 랭킹 처리
-                continue;
-            } else {
+                lankingController.showLanking();
+            }
+            else {
                 System.out.println("잘못된 명령어 입니다.");
                 Screen.subSelectScreen();
-                continue;
+
             }
         }
     }

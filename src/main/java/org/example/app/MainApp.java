@@ -1,16 +1,26 @@
 package org.example.app;
 
+import org.example.container.Container;
 import org.example.controller.MemberController;
+import org.example.db.DBConnection;
 import org.example.screen.Battle;
 import org.example.screen.Screen;
 
 import java.util.Scanner;
 
 public class MainApp {
+    public MainApp() {
+        DBConnection.DB_NAME = "gamePJ";
+        DBConnection.DB_USER = "sbsst";
+        DBConnection.DB_PASSWORD = "sbs123414";
+        DBConnection.DB_PORT = 3306;
+
+        Container.getDBConnection().connect();
+    }
 
     public void start() {
         Scanner sc = new Scanner(System.in);
-        MemberController memberController = new MemberController(sc);
+        MemberController memberController = new MemberController();
         // 메인화면 스크린 표시
         Screen.mainSreen();
         while (true) {
@@ -20,9 +30,6 @@ public class MainApp {
 
             String cmd = sc.nextLine();
             cmd = cmd.trim();
-            if (cmd.equals("4")) {
-                Battle.battleAnimation6();
-            }
 
             if (cmd.equals("3") || cmd.equals("exit") || cmd.startsWith("종료") || cmd.equals("EXIT")) {
                 Screen.exitScreen();

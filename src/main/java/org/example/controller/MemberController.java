@@ -82,11 +82,16 @@ public class MemberController{
         String nickName = null;
 
         while (true) {
+            System.out.printf("닉네임은 6자 이내로 작성 가성합니다. \n");
             System.out.printf("닉네임을 입력하세요 : ");
             nickName = sc.nextLine();
 
             if (isJoinableNickName(nickName) == false) {
                 System.out.printf("%s(은)는 이미 사용중인 닉네임 입니다.\n", nickName);
+                continue;
+            }
+            else if (nickName.length() > 6){
+                System.out.printf("닉네임의 길이가 너무 깁니다.\n");
                 continue;
             }
             break;
@@ -96,6 +101,50 @@ public class MemberController{
         memberService.join(member);
 
         System.out.printf("[%s]회원가입이 완료되었습니다 ! 환영합니다.))\n", nickName);
+    }
+
+    public int doMemberWithdrawal() {
+        String loginId = session.loginedMember.loginId;
+        String nickName = session.loginedMember.nickName;
+
+        for (int i = 0; i < 150; i++) {
+            System.out.println("");
+            System.out.flush();
+        }
+
+        System.out.println("현재 등록되어 있는 랭킹 및 계정은 모두 삭제 됩니다.");
+        System.out.printf("현재 로그인 되어 있는 %s님의 계정을 삭제 하시겠습니까?\n",loginId);
+        System.out.println("1. 삭제한다                     2. 그만둔다");
+        String deleteCmd1 = sc.nextLine();
+        if (deleteCmd1.equals("2") || deleteCmd1.startsWith("그만")){
+            return 0;
+        }
+
+        for (int i = 0; i < 150; i++) {
+            System.out.println("");
+            System.out.flush();
+        }
+
+        System.out.printf("정말로 삭제하시겠습니까 ?\n",loginId);
+        System.out.println("1. 삭제한다                     2. 그만둔다");
+        String deleteCmd2 = sc.nextLine();
+        if (deleteCmd2.equals("2") || deleteCmd2.startsWith("그만")){
+            return 0;
+        }
+
+        for (int i = 0; i < 150; i++) {
+            System.out.println("");
+            System.out.flush();
+        }
+
+        memberService.deleteMemberByLoginId(loginId);
+        memberService.deleteLankingByLoginId(nickName);
+        System.out.println("회원 탈퇴가 완료되었습니다.");
+        System.out.println("이용해 주셔서 감사합니다.");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {}
+        return 1;
     }
 
     private boolean isJoinableLoginId(String loginId) {

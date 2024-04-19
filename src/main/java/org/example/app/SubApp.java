@@ -14,7 +14,7 @@ public class SubApp {
 
         Scanner sc = new Scanner(System.in);
         LankingController lankingController = new LankingController();
-
+        MemberController memberController = new MemberController();
         // 서브화면 스크린 표시
         Screen.subSreen();
 
@@ -49,6 +49,13 @@ public class SubApp {
 
             } else if (subCmd.equals("2") || subCmd.equals("lanking") || subCmd.startsWith("랭킹")) {
                 lankingController.showLanking();
+            }
+
+            else if (subCmd.equals("4") || subCmd.equals("Withdrawal") || subCmd.startsWith("탈퇴")) {
+                if (memberController.doMemberWithdrawal() == 1){
+                    Screen.mainSreen();
+                    break;
+                }
             }
             else {
                 System.out.println("잘못된 명령어 입니다.");

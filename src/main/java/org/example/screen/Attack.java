@@ -667,7 +667,7 @@ public class Attack {
             System.out.flush();
         }
         for (int i = 0; i < attackImages.length; i++) {
-            for (int j = 0; j < 30; j++) {
+            for (int j = 0; j < 60; j++) {
                 System.out.println("");
                 System.out.flush();
             }
@@ -1019,7 +1019,7 @@ public class Attack {
             System.out.println("");
             System.out.flush();
         }
-        String[] attackImages = new String[6];
+        String[] attackImages = new String[5];
         attackImages[0] =
                 "                                                                  \n" +
                         "                                                                  \n" +
@@ -1092,8 +1092,6 @@ public class Attack {
                        "                 .    ..  . .:.  . ..                           \n" +
                        "                .          ..     ..                            ";
         attackImages[2] =
-                "";
-        attackImages[3] =
                 "                                                             :-     \n" +
                         "                           ..                            .-=-       \n" +
                         "                      .==.                          :: .=-=.   --   \n" +
@@ -1120,7 +1118,7 @@ public class Attack {
                         "                      ...+###=-. .##:                               \n" +
                         "                           .:=+++-.                                 ";
 
-        attackImages[4] =
+        attackImages[3] =
                 "                                                                                      \n" +
                         "                                                                                            \n" +
                         "                                                                                          ..\n" +
@@ -1146,7 +1144,7 @@ public class Attack {
                         "                                            -*###############*:                             \n" +
                         "                                                .=*######*=.                                \n" +
                         "                                                                                            ";
-        attackImages[5] =
+        attackImages[4] =
                         "                  .=*##############-                          +##############+:.            \n" +
                         "             .-=====+*#############-            =*=.          +#############+==++==:.       \n" +
                         "           :======++=+*############+     .=*#######=          *#########+=++*#*===--:::.    \n" +

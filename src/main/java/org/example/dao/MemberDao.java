@@ -60,4 +60,20 @@ public class MemberDao extends Dao {
         return new Member(row);
     }
 
+    public int deleteMemberByLoginId(String loginId) {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(String.format("DELETE FROM `member` "));
+        sb.append(String.format("WHERE loginId = '%s' ", loginId));
+        return dbConnection.delete((sb.toString()));
+    }
+
+    public int deleteLankingByLoginId(String nickName) {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(String.format("DELETE FROM lanking "));
+        sb.append(String.format("WHERE nickName = '%s' ", nickName));
+
+        return dbConnection.delete((sb.toString()));
+    }
 }

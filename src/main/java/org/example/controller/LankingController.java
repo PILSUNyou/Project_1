@@ -29,7 +29,7 @@ public class LankingController {
        for (int i = 0; i < forPrintLankings.size(); i++) {
            Lanking lankings = forPrintLankings.get(i);
 
-           System.out.printf("%d 위 |  %s  |  %s  |  %s  \n", i+1, lankings.regDate, lankings.nickName,TireList.tire(lankings.tire));
+           System.out.printf("%1d 위 |  %s  |  %s  |  %s  \n", i+1, lankings.regDate, lankings.nickName,TireList.tire(lankings.tire));
        }
     }
 

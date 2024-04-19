@@ -23,4 +23,12 @@ public class MemberService {
     public Member getMemberByNickName(String nickName) {
         return memberDao.getMemberByNickName(nickName);
     }
+
+    public void deleteMemberByLoginId(String loginId) {
+        memberDao.deleteMemberByLoginId(loginId);
+    }
+
+    public void deleteLankingByLoginId(String nickName) {
+        memberDao.deleteLankingByLoginId(nickName);
+    }
 }

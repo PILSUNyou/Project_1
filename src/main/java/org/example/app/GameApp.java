@@ -2,6 +2,7 @@ package org.example.app;
 
 import org.example.controller.LankingController;
 import org.example.screen.Battle;
+import org.example.screen.Loding;
 import org.example.stage.battleProgram;
 
 import java.util.Scanner;
@@ -10,7 +11,7 @@ public class GameApp {
     private Scanner sc;
     int stage = 1;
     int characterHp = 5;
-    int monsterHp = 5;
+    int monsterHp = 1;
     int defeatNumber = 0; // 1이 될 경우 게임을 종료하여 서브화면으로 나가지도록 한다.
     String breakTime = "";
 
@@ -31,7 +32,7 @@ public class GameApp {
             }
 
             if (breakTime.equals("1") || breakTime.equals("게임시작")) {
-//                Loding.lodingScreen();
+                Loding.lodingScreen();
                 switch (stage) {
                     case 1: // stage 1
                         Battle.battleAnimation1();

@@ -14,7 +14,9 @@ public class battleProgram {
     // 1단계 프로그램 진행
     public int battleProgram1(int stage, int characterHp, int monsterHp) {
         sc = new Scanner(System.in);
+
         while (characterHp > 0 && monsterHp > 0) {
+
             Random random = new Random(); // 랜덤 함수 생성
             int attackEffectRandomNumber = (int) (Math.random() * 3) + 1;
             int number1 = (int) (Math.random() * 91) + 10; // 첫 번째 랜덤 숫자 저장
@@ -49,33 +51,40 @@ public class battleProgram {
             timer.schedule(task, 10000);  // 10초 후에 TimerTask 실행
 
             int inputNumber = 0;
-            boolean isInputValid = false;
+            int attackCount = 3;
 
-            try {
-                inputNumber = sc.nextInt();
+            for(int i = attackCount; i>0; i--){
+                while (!sc.hasNextInt()) {
+                    sc.next();
+                    System.err.print("에러! 숫자가 아닙니다. \n재 입력 : ");
+                }
 
-                System.out.println("inputNumber : " + inputNumber);
-                isInputValid = true;  // 올바른 입력을 받았으므로 반복문 종료
-            } catch (InputMismatchException e) {
-                System.out.println("정수를 입력해주세요.");
-                sc.nextLine();  // 잘못된 입력을 읽고 버립니다.
+            inputNumber = sc.nextInt();
+
+                if (isTimeout) {
+                    break;  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
+                }  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
+
+                else if (inputNumber != sum){
+                    System.out.println("정답이 아닙니다 !");
+                    System.out.printf("남은 기회 : %d\n", i-1);
+                    System.out.printf("정답 입력 : ");
+                }
+                else{
+                    break;
+                }
             }
 
             task.cancel();  // TimerTask 취소
-
             if (isTimeout) {
-                for (int i = 0; i < 100; i++) {
+                for (int j = 0; j < 100; j++) {
                     System.out.println("");
                     System.out.flush();
                 }
                 new Attack().monsterAttackAnimation(stage);
                 characterHp--;
                 isTimeout = false;  // 플래그 초기화
-                continue;  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
-            }  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
-
-            if (!isInputValid) {
-                continue;  // 입력이 유효하지 않으면 다음 루프로 건너뛰기
+                continue;
             }
 
             if (inputNumber == sum) {
@@ -145,32 +154,40 @@ public class battleProgram {
             timer.schedule(task, 15000);  // 15초 후에 TimerTask 실행
 
             int inputNumber = 0;
-            boolean isInputValid = false;
+            int attackCount = 3;
 
-            try {
+            for(int i = attackCount; i>0; i--){
+                while (!sc.hasNextInt()) {
+                    sc.next();
+                    System.err.print("에러! 숫자가 아닙니다. \n재 입력 : ");
+                }
+
                 inputNumber = sc.nextInt();
-                System.out.println("inputNumber : " + inputNumber);
-                isInputValid = true;  // 올바른 입력을 받았으므로 반복문 종료
-            } catch (InputMismatchException e) {
-                System.out.println("정수를 입력해주세요.");
-                sc.nextLine();  // 잘못된 입력을 읽고 버립니다.
+
+                if (isTimeout) {
+                    break;  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
+                }  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
+
+                else if (inputNumber != sum){
+                    System.out.println("정답이 아닙니다 !");
+                    System.out.printf("남은 기회 : %d\n", i-1);
+                    System.out.printf("정답 입력 : ");
+                }
+                else{
+                    break;
+                }
             }
 
             task.cancel();  // TimerTask 취소
-
             if (isTimeout) {
-                for (int i = 0; i < 100; i++) {
+                for (int j = 0; j < 100; j++) {
                     System.out.println("");
                     System.out.flush();
                 }
                 new Attack().monsterAttackAnimation(stage);
                 characterHp--;
                 isTimeout = false;  // 플래그 초기화
-                continue;  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
-            }  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
-
-            if (!isInputValid) {
-                continue;  // 입력이 유효하지 않으면 다음 루프로 건너뛰기
+                continue;
             }
 
             if (inputNumber == sum) {
@@ -238,32 +255,40 @@ public class battleProgram {
             timer.schedule(task, 20000);  // 20초 후에 TimerTask 실행
 
             int inputNumber = 0;
-            boolean isInputValid = false;
+            int attackCount = 3;
 
-            try {
+            for(int i = attackCount; i>0; i--){
+                while (!sc.hasNextInt()) {
+                    sc.next();
+                    System.err.print("에러! 숫자가 아닙니다. \n재 입력 : ");
+                }
+
                 inputNumber = sc.nextInt();
-                System.out.println("inputNumber : " + inputNumber);
-                isInputValid = true;  // 올바른 입력을 받았으므로 반복문 종료
-            } catch (InputMismatchException e) {
-                System.out.println("정수를 입력해주세요.");
-                sc.nextLine();  // 잘못된 입력을 읽고 버립니다.
+
+                if (isTimeout) {
+                    break;  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
+                }  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
+
+                else if (inputNumber != sum){
+                    System.out.println("정답이 아닙니다 !");
+                    System.out.printf("남은 기회 : %d\n", i-1);
+                    System.out.printf("정답 입력 : ");
+                }
+                else{
+                    break;
+                }
             }
 
             task.cancel();  // TimerTask 취소
-
             if (isTimeout) {
-                for (int i = 0; i < 100; i++) {
+                for (int j = 0; j < 100; j++) {
                     System.out.println("");
                     System.out.flush();
                 }
                 new Attack().monsterAttackAnimation(stage);
                 characterHp--;
                 isTimeout = false;  // 플래그 초기화
-                continue;  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
-            }  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
-
-            if (!isInputValid) {
-                continue;  // 입력이 유효하지 않으면 다음 루프로 건너뛰기
+                continue;
             }
 
             if (inputNumber == sum) {
@@ -334,32 +359,40 @@ public class battleProgram {
             timer.schedule(task, 25000);  // 25초 후에 TimerTask 실행
 
             int inputNumber = 0;
-            boolean isInputValid = false;
+            int attackCount = 3;
 
-            try {
+            for(int i = attackCount; i>0; i--){
+                while (!sc.hasNextInt()) {
+                    sc.next();
+                    System.err.print("에러! 숫자가 아닙니다. \n재 입력 : ");
+                }
+
                 inputNumber = sc.nextInt();
-                System.out.println("inputNumber : " + inputNumber);
-                isInputValid = true;  // 올바른 입력을 받았으므로 반복문 종료
-            } catch (InputMismatchException e) {
-                System.out.println("정수를 입력해주세요.");
-                sc.nextLine();  // 잘못된 입력을 읽고 버립니다.
+
+                if (isTimeout) {
+                    break;  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
+                }  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
+
+                else if (inputNumber != sum){
+                    System.out.println("정답이 아닙니다 !");
+                    System.out.printf("남은 기회 : %d\n", i-1);
+                    System.out.printf("정답 입력 : ");
+                }
+                else{
+                    break;
+                }
             }
 
             task.cancel();  // TimerTask 취소
-
             if (isTimeout) {
-                for (int i = 0; i < 100; i++) {
+                for (int j = 0; j < 100; j++) {
                     System.out.println("");
                     System.out.flush();
                 }
                 new Attack().monsterAttackAnimation(stage);
                 characterHp--;
                 isTimeout = false;  // 플래그 초기화
-                continue;  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
-            }  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
-
-            if (!isInputValid) {
-                continue;  // 입력이 유효하지 않으면 다음 루프로 건너뛰기
+                continue;
             }
 
             if (inputNumber == sum) {
@@ -427,32 +460,40 @@ public class battleProgram {
             timer.schedule(task, 30000);  // 30초 후에 TimerTask 실행
 
             int inputNumber = 0;
-            boolean isInputValid = false;
+            int attackCount = 3;
 
-            try {
+            for(int i = attackCount; i>0; i--){
+                while (!sc.hasNextInt()) {
+                    sc.next();
+                    System.err.print("에러! 숫자가 아닙니다. \n재 입력 : ");
+                }
+
                 inputNumber = sc.nextInt();
-                System.out.println("inputNumber : " + inputNumber);
-                isInputValid = true;  // 올바른 입력을 받았으므로 반복문 종료
-            } catch (InputMismatchException e) {
-                System.out.println("정수를 입력해주세요.");
-                sc.nextLine();  // 잘못된 입력을 읽고 버립니다.
+
+                if (isTimeout) {
+                    break;  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
+                }  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
+
+                else if (inputNumber != sum){
+                    System.out.println("정답이 아닙니다 !");
+                    System.out.printf("남은 기회 : %d\n", i-1);
+                    System.out.printf("정답 입력 : ");
+                }
+                else{
+                    break;
+                }
             }
 
             task.cancel();  // TimerTask 취소
-
             if (isTimeout) {
-                for (int i = 0; i < 100; i++) {
+                for (int j = 0; j < 100; j++) {
                     System.out.println("");
                     System.out.flush();
                 }
                 new Attack().monsterAttackAnimation(stage);
                 characterHp--;
                 isTimeout = false;  // 플래그 초기화
-                continue;  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
-            }  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
-
-            if (!isInputValid) {
-                continue;  // 입력이 유효하지 않으면 다음 루프로 건너뛰기
+                continue;
             }
 
             if (inputNumber == sum) {
@@ -523,32 +564,40 @@ public class battleProgram {
             timer.schedule(task, 35000);  // 35초 후에 TimerTask 실행
 
             int inputNumber = 0;
-            boolean isInputValid = false;
+            int attackCount = 3;
 
-            try {
+            for(int i = attackCount; i>0; i--){
+                while (!sc.hasNextInt()) {
+                    sc.next();
+                    System.err.print("에러! 숫자가 아닙니다. \n재 입력 : ");
+                }
+
                 inputNumber = sc.nextInt();
-                System.out.println("inputNumber : " + inputNumber);
-                isInputValid = true;  // 올바른 입력을 받았으므로 반복문 종료
-            } catch (InputMismatchException e) {
-                System.out.println("정수를 입력해주세요.");
-                sc.nextLine();  // 잘못된 입력을 읽고 버립니다.
+
+                if (isTimeout) {
+                    break;  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
+                }  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
+
+                else if (inputNumber != sum){
+                    System.out.println("정답이 아닙니다 !");
+                    System.out.printf("남은 기회 : %d\n", i-1);
+                    System.out.printf("정답 입력 : ");
+                }
+                else{
+                    break;
+                }
             }
 
             task.cancel();  // TimerTask 취소
-
             if (isTimeout) {
-                for (int i = 0; i < 100; i++) {
+                for (int j = 0; j < 100; j++) {
                     System.out.println("");
                     System.out.flush();
                 }
                 new Attack().monsterAttackAnimation(stage);
                 characterHp--;
                 isTimeout = false;  // 플래그 초기화
-                continue;  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
-            }  // 입력 시간 초과일 경우 다음 루프로 건너뛰기
-
-            if (!isInputValid) {
-                continue;  // 입력이 유효하지 않으면 다음 루프로 건너뛰기
+                continue;
             }
 
             if (inputNumber == sum) {

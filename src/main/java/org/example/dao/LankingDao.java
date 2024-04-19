@@ -79,7 +79,8 @@ public class LankingDao extends Dao{
         StringBuilder sb = new StringBuilder();
 
         sb.append(String.format("UPDATE lanking "));
-        sb.append(String.format("SET tire = %d ", tire));
+        sb.append(String.format("SET tire = %d, ", tire));
+        sb.append(String.format("regDate = NOW() "));
         sb.append(String.format("WHERE nickName = '%s' ", nickName));
 
         return dbConnection.update(sb.toString());

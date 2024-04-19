@@ -20,7 +20,7 @@ public class SubApp {
 
         while (true) {
             Screen.subSelectScreen();
-            System.out.println("다음 입력 대기 중 :");
+            System.out.print("다음 입력 대기 중 : ");
             subCmd = sc.nextLine();
             subCmd = subCmd.trim();
 
@@ -31,7 +31,7 @@ public class SubApp {
             }
 
             if (subCmd.length() == 0) {
-                System.out.print("명령어를 입력해 주세요 :");
+                System.out.print("명령어를 입력해 주세요 : ");
                 Screen.subSelectScreen();
 
             } else if (subCmd.equals("1") || subCmd.equals("gameStart") || subCmd.startsWith("게임시작")) {

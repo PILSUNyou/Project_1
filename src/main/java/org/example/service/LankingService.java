@@ -26,4 +26,8 @@ public class LankingService {
     public void updateLankingTire(String nickName, int tire) {
         new LankingDao().updateLankingTire(nickName, tire);
     }
+
+    public void updateMemberTire(String nickName, int tire) {
+        new LankingDao().updateMemberTire(nickName, tire);
+    }
 }

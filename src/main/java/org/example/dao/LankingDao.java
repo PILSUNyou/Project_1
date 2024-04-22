@@ -88,4 +88,14 @@ public class LankingDao extends Dao{
         sb.append(String.format("WHERE nickName = '%s' ", nickName));
         return dbConnection.update(sb.toString());
     }
+
+    public int updateMemberTire(String nickName, int tire) {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(String.format("UPDATE `member` "));
+        sb.append(String.format("SET tire = %d ", tire));
+        sb.append(String.format("WHERE nickName = '%s' ", nickName));
+
+        return dbConnection.update(sb.toString());
+    }
 }

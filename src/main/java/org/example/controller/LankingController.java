@@ -43,6 +43,7 @@ public class LankingController {
         if(foundLankingName == true){
             if(foundLankingTire.tire < tire) {
                 lankingService.updateLankingTire(nickName, tire);
+                lankingService.updateMemberTire(nickName, tire);
             }
              return;
         }
